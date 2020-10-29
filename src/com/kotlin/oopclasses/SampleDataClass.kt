@@ -36,19 +36,14 @@ fun main() {
         println("Not same")
     }
 
-
+    //toString()
     val velantoString = velan.copy(velan.uAge.toString(), 12)
     println("UserName: ${velantoString.uName}, UserAge: ${velantoString.uAge}")
+
+    //componentN
+    println("UserName: ${velantoString.component1()}, UserAge: ${velantoString.component2()}")
+
 }
-
-
-
-
-
-
-
-
-
 
 
 
