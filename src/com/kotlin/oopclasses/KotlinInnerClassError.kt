@@ -2,7 +2,7 @@ package com.kotlin.oopclasses
 
 class OuterErr {
     val oVal= "Outside the nested calss"
-    class Nested {
+    inner class Nested {
         val nVal = "Inside the nested class"
         fun showMe() = oVal
     }
