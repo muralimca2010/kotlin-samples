@@ -6,9 +6,9 @@ fun printAll(strings: Collection<String>) {
 }
 
 fun main() {
-    val stringList = listOf("one", "two", "one")
+    val stringList = listOf("ram", "som", "jam")
     printAll(stringList)
 
-    val stringSet = setOf("one", "two", "three")
+    val stringSet = setOf("jam", "som", "ram")
     printAll(stringSet)
 }

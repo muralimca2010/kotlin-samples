@@ -4,7 +4,7 @@ package com.kotlin.interoperability.kotlinTojava;
 import com.sun.istack.internal.Nullable;
 
 
-public class Bus {
+public class Car {
 
     public static int x = 5;
 
@@ -12,17 +12,13 @@ public class Bus {
     private String model;
     private int year;
 
-    public Bus(String color, String model, int year) {
+    public Car(String color, String model, int year) {
         this.color = color;
         this.model = model;
         this.year = year;
     }
 
-    public void demoMethod(Runnable r) {
 
-        new Thread(r).start();
-
-    }
 
     public static String xString() {
         return "This is x: " + x++;

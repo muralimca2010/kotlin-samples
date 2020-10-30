@@ -2,16 +2,15 @@ package com.kotlin.delegation
 
 import kotlin.properties.Delegates
 
-fun main() {
-
-    val carName = CarName()
-    carName.name = "BMW"
-    carName.name = "HONDA"
-}
-
-class CarName {
-
-    var name: String by Delegates.observable("car name") { _, old, new ->
+class User {
+    var name: String by Delegates.observable("<no name>") {
+        prop, old, new ->
         println("$old -> $new")
     }
+}
+
+fun main() {
+    val user = User()
+    user.name = "first"
+    user.name = "second"
 }

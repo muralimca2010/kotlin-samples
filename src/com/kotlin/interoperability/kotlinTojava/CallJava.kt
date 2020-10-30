@@ -1,21 +1,20 @@
-import com.kotlin.interoperability.kotlinTojava.Bus
+import com.kotlin.interoperability.kotlinTojava.Car
 
 
-fun main(args: Array<String>) {
+fun main() {
 
-    val bus = Bus("yellow", "Benz", 2015)
-    bus.color = "white"
-    println(bus)
+    val car = Car("yellow", "Benz", 2015)
+    car.color = "white"
+    println(car)
 
-    bus.variableMethod(5, "hi", "byerdf")
+    car.variableMethod(5, "hi", "byerdf")
     val strings = arrayOf("dsfjsdf", "dsfrireji3o")
-    bus.variableMethod(10, *strings)
+    car.variableMethod(10, *strings)
 
-    bus.getIntArray(intArrayOf(1, 2, 3))
+    car.getIntArray(intArrayOf(1, 2, 3))
 
-    println(Bus.xString())
+    println(Car.xString())
 
-    bus.demoMethod { println("Sample thread!") }
 
 
 }

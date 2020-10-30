@@ -1,6 +1,6 @@
 package com.kotlin.oopclasses
 
-fun main(args: Array<String>) {
+fun main() {
 
     val anitha = Girl()
     anitha.actualAge = 15

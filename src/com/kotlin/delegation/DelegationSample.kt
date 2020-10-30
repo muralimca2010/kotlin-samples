@@ -1,37 +1,23 @@
 package com.kotlin.delegation
 
+
+
+interface Base {
+    fun printMessage()
+    fun printMessageLine()
+}
+
+class BaseImpl(val x: Int) : Base {
+    override fun printMessage() { print(x) }
+    override fun printMessageLine() { println(x) }
+}
+
+class Derived(b: Base) : Base by b {
+    override fun printMessage() { print("abc") }
+}
+
 fun main() {
-
-    val b = DelegationImplementation("Welcome Here!")
-
-    NewFeature(b).myMessage()
-    NewFeature(b).myMessageLine()
+    val b = BaseImpl(10)
+    Derived(b).printMessage()
+    Derived(b).printMessageLine()
 }
-
-interface Delegation {
-    fun myMessage()
-    fun myMessageLine()
-}
-
-class DelegationImplementation(private val y: String) : Delegation {
-
-    override fun myMessage() {
-        print(y)
-    }
-
-    override fun myMessageLine() {
-        println(y)
-    }
-}
-
-class NewFeature(m: Delegation) : Delegation by m {
-
-    override fun myMessage() {
-        println("Hey Check this!!")
-    }
-
-    /*override fun myMessageLine() {
-        println("Hey ertreteetr this!!")
-    }*/
-}
-
