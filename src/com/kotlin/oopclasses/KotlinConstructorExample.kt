@@ -1,13 +1,13 @@
 package com.kotlin.oopclasses
 
-fun main() {
+fun main(args: Array<String>) {
 
-    var student = Student1("Anitha", true)
-    var student11 = Student1("Priya", false)
+    val person1 = Person("Joe", 25)
 
-    println(student)
+    println("First Name = ${person1.firstName}")
+    println("Age = ${person1.age}")
 }
 
-private class Student1(name: String, isQualified: Boolean = false) {
+class Person(val firstName: String, var age: Int) {
 
 }

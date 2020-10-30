@@ -2,15 +2,18 @@ package com.kotlin.oopclasses
 
 
 fun main() {
-    val s = "PriyA"
-    println(s.lowerFirstAndLast())
+    class Example {
+        fun printFunctionType() { println("Class method") }
+    }
+
+    fun Example.printFunctionType() { println("Extension function") }
+
+    Example().printFunctionType()
+
+
+
+
+    fun Example.printFunctionType(i: Int) { println("Extension function") }
+
+    Example().printFunctionType(1)
 }
-
-fun String.lowerFirstAndLast(): String {
-    val lowerFirst = substring(0, 1).toLowerCase() + substring(1)
-    return lowerFirst.substring(0, lowerFirst.length - 1) +
-            lowerFirst.substring(lowerFirst.length - 1, lowerFirst.length).toLowerCase()
-}
-
-
-

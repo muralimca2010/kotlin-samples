@@ -1,15 +1,23 @@
 package com.kotlin.oopclasses
 
-fun main() {
 
-    println(SchoolTeacher.SCIENCE.getDetails())
 
+enum class Months{
+    January,
+    February,
+    March
 }
 
-enum class SchoolTeacher(private val subjectName: String, private val number: Int) {
 
-    MATHS("Maths", 7), SCIENCE("Science", 12),
-    ENGLISH("English", 56), HINDI("Hindi", 12);
+fun main(args: Array<String>) {
 
-    fun getDetails() = "Total $number no. of teachers available for $subjectName "
+    println(Months.January) //prints January
+    println(Months.values().size) //prints 3
+    println(Months.valueOf("March")) //prints March
+
+    for (enum in Months.values()) {
+        println(enum.name)
+    }
+
+    println(Months.valueOf("Mar")) //throws java.lang.IllegalArgumentException: No enum constant Months.Mar
 }

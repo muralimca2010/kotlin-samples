@@ -1,35 +1,20 @@
 package com.kotlin.oopclasses
 
-fun main() {
-
-    val emp = Manager("Priya")
-    println(emp.name)
-    emp.isQualified = false
-    println(emp.isQualified)
-
-    val emp2 = Manager("Anitha")
-    println(emp2.name)
-    println(emp2.isQualified)
-
-    println(DemoClass().dummy)
-
+fun main(args: Array<String>) {
+    val person1 = KotlinConstructor("joe", 25)
 }
 
-class Manager(var name: String, isQualified: Boolean = false) {
+class KotlinConstructor(fName: String, personAge: Int) {
+    val firstName: String
+    var age: Int
 
-    var isQualified = isQualified
-        get() {
-            println("Get Value")
-            return field
-        }
-        set(value) {
-            println("Set Value")
-            field = value
-        }
+    // initializer block
+    init {
+        firstName = fName.capitalize()
+        age = personAge
 
+        println("First Name = $firstName")
+        println("Age = $age")
+    }
 }
-
-class DemoClass(var dummy: String = "Test") {
-}
-
 
