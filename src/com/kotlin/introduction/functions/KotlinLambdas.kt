@@ -1,6 +1,6 @@
 package academy.learnprogramming.lambdas
 
-fun main(args: Array<String>) {
+fun main() {
     //run { println("I'm in a lambda!") }
 
     val employees = listOf(Employee("John", "Smith", 2012),
@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
             Employee("Mary", "Johnson", 2010),
             Employee("Mike", "Jones", 2002))
 
-    //println(employees.minBy(Employee::startYear))
+    println(employees.minBy(Employee::startYear))
 
 //    var num = 10
 //    run {
@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
 //    }
 
     run(::topLevel)
+    println(useParameter(employees, 2))
 
 }
 
